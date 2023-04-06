@@ -43,7 +43,7 @@ public class Main {
 
         } else if (choiceIntro == 2) {
             Client selectedClient = cicInterface.interactionChooseClient();
-            int secondChoice = cicInterface.secondInteraction();
+            int secondChoice = cicInterface.secondInteraction(selectedClient);
             cicInterface.interactionOperations(secondChoice, selectedClient);
         }
     }

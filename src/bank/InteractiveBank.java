@@ -14,8 +14,8 @@ public class InteractiveBank {
         return this.scanner.nextInt();
     }
 
-    public int secondInteraction() {
-        System.out.println("Which operation do you want to operate?\n" +
+    public int secondInteraction(Client selectedClient) {
+        System.out.println("Which operation do you want to operate on " + selectedClient.getName()+ "'s account?\n" +
                 "1) Display balance\n" +
                 "2) Deposit\n" +
                 "3) Withdrawal\n" +
@@ -28,7 +28,7 @@ public class InteractiveBank {
         System.out.println("What is the name of your client?");
         Client newClient = new Client(scanner.next());
         this.bank.addClient(newClient);
-        System.out.println(newClient.name +  " successfully added as a new client");
+        System.out.println(newClient.getName()+  " successfully added as a new client");
     }
 
     public Client interactionChooseClient() {
